@@ -11,7 +11,7 @@ var valid = [
   '(a) => a',
   '(a) => {\n}',
   'a.then((foo) => {});',
-  'a.then((foo) => { if (true) {}; });',
+  'a.then((foo) => { if (true) {}; });'
 ].map(function(code) {
   return {
     code: code,
@@ -28,7 +28,7 @@ var invalid = [
   'a => {\n}',
   'a.then(foo => {});',
   'a.then(foo => a);',
-  'a(foo => { if (true) {}; });',
+  'a(foo => { if (true) {}; });'
 ].map(function(code) {
   return {
     code: code,

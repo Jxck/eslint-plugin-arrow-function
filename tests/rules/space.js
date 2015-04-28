@@ -9,7 +9,7 @@ var valid = [
   '() => {}',
   '(a) => {}',
   'a => a',
-  '() => {\n}',
+  '() => {\n}'
 ].map(function(code) {
   return {
     code: code,
@@ -27,7 +27,7 @@ var invalid = [
   'a =>a',
   'a=> a',
   '()=> {\n}',
-  '() =>{\n}',
+  '() =>{\n}'
 ].map(function(code) {
   return {
     code: code,
