@@ -123,6 +123,10 @@ rules:
   arrow-function/space  : 2
 ```
 
+## Contributors
+
+- [teppeis](https://github.com/teppeis)
+
 ## License
 
 MIT
