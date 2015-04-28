@@ -1,0 +1,35 @@
+{
+  "name": "eslint-plugin-arrow-function",
+  "description": "custom ESLint rule, ckecks arrow function literal.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jxck"
+  },
+  "bugs": {
+    "url": "https://github.com/Jxck/eslint-plugin-arrow-function/issues"
+  },
+  "devDependencies": {
+    "eslint": "^0.20.0",
+    "eslint-tester": "^0.6.0",
+    "mocha": "^2.2.4"
+  },
+  "homepage": "https://github.com/Jxck/eslint-plugin-arrow-function",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "eslintplugin",
+    "lint"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": ">=0.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jxck/eslint-plugin-arrow-function"
+  },
+  "scripts": {
+    "test": "mocha tests/rules/"
+  }
+}
