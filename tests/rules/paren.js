@@ -21,7 +21,6 @@ var valid = [
 
 var message = 'arrow function argument should wrap with parens';
 
-
 var invalid = [
   'a => {}',
   'a => a',
