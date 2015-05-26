@@ -1,6 +1,6 @@
 # eslint-plugin-arrow-function
 
-custom ESLint rule, ckecks arrow function literal.
+custom ESLint rule, checks arrow function literal.
 
 ## Rule Details
 
@@ -39,8 +39,8 @@ if (a => 2) {
 };
 ```
 
-this is begger, because condition of if is arrow function, not comparison.
-this should be like this, and you can notice it's not you expect.
+this is better, because condition of if is arrow function, not comparison.
+this should be like this, and you can notice it's not what you expect.
 
 ```js
 var a = 1;
@@ -59,7 +59,7 @@ var f = a => b ? c: d;
 // f = ?
 ```
 
-`f` is arrow function which gets a as arguments and return result of `b ? c: d`.
+`f` is arrow function which gets a as arguments and returns the result of `b ? c: d`.
 
 this should be like this again.
 
@@ -68,11 +68,11 @@ var a = 1, b = 2, c = 3, d = 4;
 var f = (a) => b ? c: d;
 ```
 
-you may notice what is this.
+you may notice what this is.
 
 ### no-condition
 
-Disallow arrow function at place where condition is expected.
+Disallow arrow function at places where a condition is expected.
 
 The following patterns are considered warnings:
 
@@ -84,7 +84,7 @@ a => 1 ? 2 : 3
 (a => 1) ? 2 : 3
 ```
 
-Even if the arguments of arrow function is wrapped with parens, this rule warns it.
+Even if the arguments of the arrow function are wrapped with parens, this rule warns you about it.
 
 ### space
 
