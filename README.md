@@ -110,6 +110,115 @@ a => a
 () => {\n}
 ```
 
+### return-shorthand
+
+Whether to require to use shorthand (no block statement) when using arrow
+functions with only one return statement.
+
+#### always
+
+The following patterns are considered warnings:
+
+```js
+(bar) => { return { foo: bar }}
+() => { return 5; }
+(bar) => {
+  return { foo: bar }
+}
+() => {
+  return 5;
+}
+() => {
+  return call(
+    arg1, arg2
+  );
+}
+```
+
+The following patterns are not warnings:
+
+```js
+() => {
+  var x = 2 + 2;
+  return x;
+}
+(bar) => ({foo: bar})
+() => 5
+() => call(
+  arg1, arg2
+)
+```
+
+#### only-object
+
+Only enforce object literal returns to be shorthand.
+
+The following patterns are considered warnings:
+
+```js
+(bar) => { return { foo: bar }}
+(bar) => {
+  return { foo: bar }
+}
+```
+
+The following patterns are not warnings:
+
+```js
+() => {
+  var x = 2 + 2;
+  return x;
+}
+() => { return 5; }
+(bar) => ({foo: bar})
+() => 5
+() => call(
+  arg1, arg2
+)
+() => {
+  return 5;
+}
+() => {
+  return call(
+    arg1, arg2
+  );
+}
+```
+
+### never
+
+The following patterns are considered warnings:
+
+```js
+(bar) => ({foo: bar})
+() => 5
+() => call(
+  arg1, arg2
+)
+```
+
+The following patterns are not warnings:
+
+```js
+(bar) => { return { foo: bar }}
+(bar) => {
+  return { foo: bar }
+}
+() => {
+  var x = 2 + 2;
+  return x;
+}
+() => { return 5; }
+() => {
+  return 5;
+}
+() => {
+  return call(
+    arg1, arg2
+  );
+}
+```
+
 ## Usage
 
 ```yaml
@@ -121,6 +230,7 @@ rules:
   arrow-function/parens : 2
   arrow-function/no-condition : 2
   arrow-function/space  : 2
+  arrow-function/return-shorthand: [2, "only-object"]
 ```
 
 ## Contributors
