@@ -13,6 +13,7 @@ var valid = [
 ].map(function(code) {
   return {
     code: code,
+    args: [ 1, { before: true, after: true }],
     ecmaFeatures: { arrowFunctions: true }
   };
 });
