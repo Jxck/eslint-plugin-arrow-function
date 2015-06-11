@@ -88,7 +88,14 @@ Even if the arguments of the arrow function are wrapped with parens, this rule w
 
 ### space
 
-The following patterns are considered warnings:
+this rules takes one arguments of structure contains `before` and `after` property
+and each property has bool value.
+
+default configuration is `{ "before": true, "after": true }`.
+
+`true` means there should have **one space** and `false` means **no space**.
+
+The following patterns are considered warnings if `{ "before": true, "after": true }`.
 
 ```js
 ()=> {}
@@ -101,13 +108,40 @@ a=> a
 () =>{\n}
 ```
 
-The following patterns are not warnings:
+The following patterns are not warnings if `{ "before": true, "after": true }`.
 
 ```js
 () => {}
 (a) => {}
 a => a
 () => {\n}
+```
+
+The following patterns are not warnings if `{ "before": false, "after": false }`.
+
+```js
+()=>{}
+(a)=>{}
+a=>a
+()=>{\n}
+```
+
+The following patterns are not warnings if `{ "before": true, "after": false }`.
+
+```js
+() =>{}
+(a) =>{}
+a =>a
+() =>{\n}
+```
+
+The following patterns are not warnings if `{ "before": false, "after": true }`.
+
+```js
+()=> {}
+(a)=> {}
+a=> a
+()=> {\n}
 ```
 
 ## Usage
@@ -120,7 +154,7 @@ rules:
   # Plugins
   arrow-function/parens : 2
   arrow-function/no-condition : 2
-  arrow-function/space  : 2
+  arrow-function/space  : [2, { "before": true, "after": true } ]
 ```
 
 ## Contributors
