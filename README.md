@@ -161,6 +161,12 @@ rules:
 
 - [teppeis](https://github.com/teppeis)
 
+## Changelog
+
+- v0.0.3 : add configuration for `space`
+- v0.0.2 : add `no-condition` rule. thanks to [teppeis](https://github.com/teppeis)
+- v0.0.1 : first release
+
 ## License
 
 MIT
