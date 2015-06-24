@@ -163,6 +163,7 @@ rules:
 
 ## Changelog
 
+- v0.1.0 : fix rule name from `paren` to `parens` #4
 - v0.0.3 : add configuration for `space`
 - v0.0.2 : add `no-condition` rule. thanks to [teppeis](https://github.com/teppeis)
 - v0.0.1 : first release
