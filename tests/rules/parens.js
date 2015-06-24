@@ -36,7 +36,7 @@ var invalid = [
   };
 });
 
-eslintTester.addRuleTest('./lib/rules/paren', {
+eslintTester.addRuleTest('./lib/rules/parens', {
   valid: valid,
   invalid: invalid
 });

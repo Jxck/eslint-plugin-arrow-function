@@ -1,7 +1,7 @@
 module.exports = {
   rules: {
     'space': require('./lib/rules/space'),
-    'paren': require('./lib/rules/paren'),
+    'parens': require('./lib/rules/parens'),
     'no-condition': require('./lib/rules/no-condition')
   }
 };
