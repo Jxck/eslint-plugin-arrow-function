@@ -28,9 +28,7 @@ plugins:
 
 rules:
   # Plugins
-  arrow-function/parens : 2
   arrow-function/no-condition : 2
-  arrow-function/space  : [2, { "before": true, "after": true } ]
 ```
 
 ## Contributors
