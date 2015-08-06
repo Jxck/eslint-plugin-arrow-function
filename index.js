@@ -1,5 +1,7 @@
+"use strict";
+
 module.exports = {
-  rules: {
-    'no-condition': require('./lib/rules/no-condition')
-  }
+    rules: {
+        "no-condition": require("./lib/rules/no-condition")
+    }
 };
