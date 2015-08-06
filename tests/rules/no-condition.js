@@ -1,9 +1,9 @@
 'use strict';
 
-var linter = require('eslint').linter;
-var ESLintTester = require('eslint-tester');
-var eslintTester = new ESLintTester(linter);
+var rule = require("../../lib/rules/no-condition"),
+    RuleTester = require("eslint").RuleTester;
 
+var ruleTester = new RuleTester();
 
 var valid = [
   'if (a >= 1) {}',
@@ -36,7 +36,7 @@ var invalid = [
   };
 });
 
-eslintTester.addRuleTest('./lib/rules/no-condition', {
+ruleTester.run('./lib/rules/no-condition', rule, {
   valid: valid,
   invalid: invalid
 });
