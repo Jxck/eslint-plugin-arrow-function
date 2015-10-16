@@ -11,7 +11,8 @@ var valid = [
     "for (var a = 1; a >= 10; a++) {}",
     "a >= 1 ? 2 : 3",
     "(a >= 1) ? 2 : 3",
-    "[1,2,3].filter(n => n > 2)"
+    "[1,2,3].filter(n => n > 2)",
+    "var x = (val) => val ? true : false"
 ].map(function(code) {
     return {
         code: code,
