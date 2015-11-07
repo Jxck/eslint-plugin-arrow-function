@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-arrow-function",
   "description": "custom ESLint rule, ckecks arrow function literal.",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": {
     "name": "Jxck"
   },
